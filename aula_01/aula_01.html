@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Aula_01 JavaScript</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            padding-left: 50px;
+            background-color: black;
+            color: whitesmoke;
+            font-size: 28px;
+            font-family: fantasy;
+            line-height: 50px;
+        }
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #nome, #nota1, #nota2, #media, #situacao{
+            height: 26px;
+            width: 250px;
+            font-size: 26px;
+            font-family: fantasy;
+            background-color: white;
+            color: black;
+        }
+        #calc{
+            width: 250px;
+            height: 50px;
+            font-size: 26px;
+            font-family: fantasy;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Controle de Notas</h1>
+
+        Nome:
+        <input type="text" id="nome" value="">
+
+        Nota 1:
+        <input type="text" id="nota1">
+
+        Nota 2:
+        <input type="text" id="nota2">
+
+        Media:
+        <input type="text" id="media" value="" disabled>
+
+        Situação:
+        <input type="text" id="situacao" value="" disabled>
+        
+        <input type="button" id="calc" value="Calc">
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
