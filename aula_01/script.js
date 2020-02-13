@@ -1,10 +1,14 @@
 //const $nome = document.querySelector("input>div")
 
 const $calc = document.getElementById( 'calc' );
+const $exibir = document.getElementById('exibir');
+const $conteiner = document.querySelector ('.conteiner');
+
+console.log($conteiner);
 
 const calcMedia = (n1 , n2) => (parseInt(n1) + parseInt(n2)) / 2;
 
-const calcSituacao = ( media ) => media >=
+const calcSituacao = ( media ) => media >= 50? "Aprovado" : "Reprovado";
 
 /*{
     if ( media >= 50 ){
@@ -19,9 +23,6 @@ const calcSituacao = ( media ) => media >=
         
     }*/
 
-    console.log($nome.value);
-}
-
 const exibirMedia = () => {
     const $nome = document.getElementById( 'nome' );
     const nota1 = document.getElementById( 'nota1' ).value;
@@ -31,12 +32,18 @@ const exibirMedia = () => {
 
     const media = calcMedia (nota1 , nota2);
 
+    $situacao.value = calcSituacao(media);
+
     $media.value = media;
+
+    console.log($nome.value);
+
 }
 
 const calcConceito = () => {
-    const $conceito = document.getElementById( 'conceito' );   
     const media = document.getElementById( 'media' ).value;
+    const $conceito = document.getElementById( 'conceito' );   
+    
     
     if(media < 0 || media > 100){
         $conceito.value= "*ERRO*";
@@ -54,10 +61,13 @@ const calcConceito = () => {
 
 }
 
-const calcular = () =>{
-    calcSituacao();
-    calcConceito();
+const calcular = () => {
     exibirMedia();
+    calcConceito();
+    
 }
 
+const exibir = (el) => el.classList.add ( 'exibir' );
+
 $calc.addEventListener('click', calcular);
+$exibir.addEventListener('click',( ) => exibir ($conteiner));
