@@ -1,0 +1,269 @@
+.centraliza {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.letraGrande {
+    width: inherit;
+    height: inherit;
+    font-size: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    font-weight: bold;
+    font-family: fantasy, Arial;
+}
+
+.letraNormal {
+    width: inherit;
+    height: inherit;
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 1.7em;
+    line-height: 1.7em;
+    font-family: Anton, fantasy, Arial;
+}
+
+.letraCentralizada {
+    text-align: center;
+}
+
+/* Container Geral */
+#conteudoSite {
+    width: 1200px;
+    min-height: 800px;
+    height: auto;
+}
+
+#conteinerNomeInicial {
+    width: 720px;
+    height: 150px;
+    box-sizing: border-box;
+    padding-top: 50px;
+    text-align: center;
+}
+
+#conteinerNomeInicial h1 {
+    font-size: 4em;
+    font-family: Anton, fantasy, Arial;
+}
+
+/* Conteudo Inicial */
+#conteinerInicial {
+    width: 1200px;
+    min-height: 100px;
+    height: auto;
+    display: block;
+}
+
+#conteinerBarraPesquisaInicial {
+    width: 720px;
+    /* min-height: 50px;
+    height: auto; */
+    height: 50px;
+}
+
+#barraDePesquisaInicial {
+    width: 670px;
+    height: 50px;
+    float: left;
+    /* background-color: lawngreen; */
+}
+
+#pesquisaInicial {
+    width: 665px;
+    height: 45px;
+    /* border-radius: 25px; */
+    font-size: 2em;
+    text-align: center;
+}
+
+#conteinerImagemBuscaInicial {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background-image: url(../imagens/lupa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#conteinerResultadosPesquisaInicial {
+    width: 668px;
+    min-height: 50px;
+    height: auto;
+    float: left;
+    /* margin-top: 50px; */
+    border: black solid 1px;
+    background-color: white;
+    display: none;
+}
+
+/* Conteudo Posterior */
+#conteinerPosterior {
+    width: 1200px;
+    min-height: 800px;
+    height: auto;
+    box-sizing: border-box;
+    padding-top: 100px;
+    display: none;
+}
+
+#conteinerNomeHeroiBarraPesquisa {
+    width: 1200px;
+    height: 100px;
+    margin-top: -100px;
+    position: absolute;
+    z-index: 999;
+}
+
+#conteinerNomeHeroi {
+    width: 700px;
+    height: 100px;
+    float: left;
+}
+
+#conteinerBarraPesquisaPosterior {
+    width: 500px;
+    height: 50px;
+    margin-top: 25px;
+    float: left;
+}
+
+#barraDePesquisaPosterior {
+    width: 450px;
+    height: 50px;
+    float: left;
+    /* background-color: lime; */
+}
+
+#pesquisaPosterior {
+    width: 440px;
+    height: 45px;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+#conteinerImagemBuscaPosterior {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background-image: url(../imagens/lupa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#conteinerResultadosPesquisaPosterior {
+    width: 443px;
+    min-height: 50px;
+    height: auto;
+    float: left;
+    border: black solid 1px;
+    background-color: white;
+    display: none;
+}
+
+.heroisResultado {
+    font-size: 1.6em;
+    line-height: 1.6em;
+    box-sizing: border-box;
+    padding-left: 5px;
+    /* -moz-user-select: none; */
+}
+
+.heroisResultado:hover {
+    cursor: pointer;
+    background-color: rgba(90, 90, 255, 0.6);
+}
+
+#conteinerImagemInformacoes {
+    width: 1200px;
+    min-height: 800px;
+    height: auto;
+}
+
+#conteinerImagemHeroi {
+    width: 480px;
+    height: 600px;
+    border-radius: 5px;
+    float: left;
+    background-color: maroon;
+}
+
+.imagemHeroi {
+    width: 480px;
+    height: 600px;
+    border-radius: 5px;
+}
+
+#conteinerInformacoesHeroi {
+    width: 720px;
+    min-height: 600px;
+    height: auto;
+    float: left;
+}
+
+#informacoesEsquerda {
+    width: 360px;
+    min-height: 600px;
+    height: auto;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 10px;
+    float: left;
+}
+
+.nomeSecao {
+    padding-left: 0px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    background-color: #33c5ff;
+}
+
+.formataSecao {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    /* background-color: rgba(255, 41, 41, 0.8); */
+    background-color: #b8ebff;
+}
+
+#powerStats {
+    width: 300px;
+    min-height: 300px;
+    height: auto;
+}
+
+#appearance {
+    width: 300px;
+    min-height: 350px;
+    height: auto;
+}
+
+#connections {
+    width: 300px;
+    min-height: 250px;
+    height: auto;
+}
+
+#informacoesDireita {
+    width: 360px;
+    min-height: 600px;
+    height: auto;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 20px;
+    float: left;
+}
+
+#work {
+    width: 300px;
+    min-height: 250px;
+    height: auto;
+}
+
+#biography {
+    width: 300px;
+    min-height: 750px;
+    height: auto;
+}
