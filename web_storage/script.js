@@ -8,6 +8,13 @@ const getLocalDates = () => JSON.parse(localStorage.getItem("listItens"));
 const updateData = () => localStorage.setItem("listItens", transform(arrayNames));
 let arrayNames = getLocalDates();
 
+const addData = (newName) => {
+    arrayNames.push(newName);
+
+    updateData();
+    showInformations();
+}
+
 const showInformations = () => {
     const $listName = document.getElementById("list");
     $listName.innerHTML = "";
@@ -16,6 +23,7 @@ const showInformations = () => {
     arrayNames.forEach(element => {
         $listName.innerHTML += `<li>${element}</li>`;
     });
+
 }
 
 const getValidNames = () => {
@@ -24,20 +32,11 @@ const getValidNames = () => {
 
     if (stringDataBase.indexOf(name) != -1) {
         return name;
-
     } else {
         alert(`O nome ${name} não foi encontrado no banco! Ele pode ser cadastrado.`);
         return "no results"
-
     };
-}
 
-const addData = () => {
-    var newName = prompt("Digite seu nome:");
-    arrayNames.push(newName);
-
-    updateData();
-    showInformations();
 }
 
 const clear = () => {
@@ -50,9 +49,10 @@ const clear = () => {
 const rename = () => {
     const oldName = getValidNames();
     if (oldName !== "no results") {
+        const newName = prompt(`O ${oldName} foi escolhido. Digite o novo nome para atualizar:`);
 
         remove(oldName);
-        addData();
+        addData(newName);
     }    
 }
 
@@ -61,13 +61,23 @@ const remove = (remove) => {
 
     updateData();
     showInformations();
-
 }
 
+const inputText = () => {
+    var newName = prompt("Digite um nome:");
+
+    addData(newName);
+}
+
+const deleteText= () => {
+    var name = prompt("Digite um nome a ser deletado:");
+
+    remove(name)
+}
 
 showInformations();
 
-document.getElementById("add").addEventListener("click", () => addData());
+document.getElementById("add").addEventListener("click", () => inputText());
 document.getElementById("alter").addEventListener("click", () => rename());
-document.getElementById("remove").addEventListener("click", () => remove());
+document.getElementById("remove").addEventListener("click", () => remove(deleteText()));
 document.getElementById("clear").addEventListener("click", () => clear());

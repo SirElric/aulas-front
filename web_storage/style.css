@@ -2,54 +2,48 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font: bolder 2vh arial;
+    cursor: default;
 }
 body{
-    background-color: #292929;
-    padding-top: 10vh;
+    background-color: #121212;
 }
 main{
-    width: 600px;
-    height: 400px;
-    background-color: #121212;
-    margin: auto;
-    border-radius: 2vh;
-    padding: 2vh;
-    box-shadow: 2px 2px 2px 2px #1f1f22;
-}
-.button{
-    background-color: #c38ffe;
-    border: solid 2px #c38ffe;
+    background-color: #1e1e1e;
+    width: 50vw;
+    height: 50vh;
+    padding: 10px;
+    margin: 10vh auto;
     border-radius: 5px;
-    color: black;
-    padding: 10px 15px;
-    text-align: center;
-    display: inline-block;
-    font-weight: normal;
-    font-size: 15px;
-    margin: 4px 2px;
+    box-shadow: 0px 5px 5px #0a0a0a;
+}
+.button {
+    font: bold calc(2px + 1vw) sans-serif;
+    padding: 10px 10px;
+    background-color: white;
+    border: 1px solid #0a0a0a;
+    border-radius: 5px;
+    color: #1e1e1e;
     cursor: pointer;
+    box-shadow: 0px 5px 5px #1a1919;
+    outline: none;
 }
 .button:hover{
-    background-color: white;
-    border: solid 2px #c38ffe;
-    color: black;
+    background-color: #1e1e1e;
+    border: 1px solid #dfdfdf;
+    color: #dfdfdf;
 }
-#name-box{
-    width: 10vw;
-    height: 3vh;
-    padding-left: 5px;
-}
-#list{
+.list{
     width: 100%;
     height: 80%;
-    overflow: auto;
+    margin-top: 10px;
     padding: 10px;
-    background-color: #1d1d1d;
     border-radius: 5px;
-    margin-top: 25px;
+    background-color: #252525;
     list-style: none;
-    box-shadow: 2px 2px 2px 2px #121212;
-    
-    color: white;
+    box-shadow: 0px 5px 5px #1a1919;
+    overflow: auto;
+}
+.list li{
+    font: bold calc(2px + 2vw) sans-serif;
+    color: #dfdfdf;
 }
