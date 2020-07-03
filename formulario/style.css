@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    cursor: default;
 }
 body {
     background-color: #121212;
@@ -11,17 +10,17 @@ body {
     background-color: #1e1e1e;
     width: 80vw;
     margin: 10vh auto;
-    border-radius: 5px;
-    box-shadow: 0px 5px 5px #0a0a0a;
+    border-radius: 6px;
+    box-shadow: 0px 0px 20px #0a0a0a;
 }
 .titulo{
     background-color: #1e1e1e;
     height: 45px;
     text-align: center;
-    font: bolder calc(10px + 1vw)/45px sans-serif;
+    font: bolder calc(12px + 1vw)/45px sans-serif;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    box-shadow: 0px 0px 5px #0a0a0a;
+    box-shadow: 1px 0px 5px #0a0a0a;
     color: #ffffff;
 }
 .subtitulo{
@@ -36,7 +35,8 @@ body {
 }
 .botao {
     font: bold calc(2px + 1vw) sans-serif;
-    padding: 0px 10px;
+    padding: 5px 10px;
+    margin: 1vw;
     background-color: white;
     border: 1px solid #0a0a0a;
     border-radius: 5px;
@@ -58,12 +58,45 @@ body {
     z-index: -10;
     opacity: 0;
 }
-.modal {
+.modal{
     width: 50vw;
     margin: 10vh auto;
     background-color: #1e1e1e;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 1px 0px 5px #0a0a0a;
 }
+.form{
+    display: grid;
+    grid-template-areas: 
+        "nome nome nome nome"
+        "email email celular celular"
+        "endereco numero bairro bairro"
+        "cidade cidade estado cep";
+    gap: 10px;
+    padding: 2vw;
+}
+
+#nome{ grid-area: nome;}
+#email{ grid-area: email;}
+#celular{ grid-area: celular;}
+#endereco{ grid-area: endereco;}
+#numero{ grid-area: numero;}
+#bairro{ grid-area: bairro;}
+#cidade{ grid-area: cidade;}
+#estado{ grid-area: estado;}
+#cep{ grid-area: cep;}
+
+.form > input{
+    width: 100%;
+}
+
 .exibir-modal{
     opacity: 1;
     z-index: 999;
+}
+
+.acao{
+    display: flex;
+    justify-content: center;
 }
