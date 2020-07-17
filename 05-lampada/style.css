@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font: bold 26px arial;
+}
+
+.switch{
+	width: 10vw;
+    font: bold 20px arial;
+	padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+
+    border: 2px solid darkcyan;
+    background-color: darkcyan;
+    color: #ffffff;
+}
+.switch:hover{
+    background-color: white;
+    color: darkcyan;
+}
+
+#lamp {
+    cursor: pointer;
+}
