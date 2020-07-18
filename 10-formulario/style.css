@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+body {
+    background-color: #dfdfdf;
+}
+.cadastro-form {
+    background-color: #ffffff;
+    width: 80vw;
+    margin: 5vh auto;
+    border-radius: 5px;
+    box-shadow: 1px 0px 5px #0a0a0a;
+}
+.titulo{
+    background-color: #002729;
+    height: 100px;
+    text-align: center;
+    font: bolder calc(12px + 1vw)/100px sans-serif;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #ffffff;
+}
+.subtitulo{
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw;
+    color: #1e1e1e;
+}
+.subtitulo > div {
+    font: bold calc(12px + 1vw)/45px sans-serif;
+}
+.botao {
+    font: bold calc(2px + 1vw) sans-serif;
+    padding: 5px 10px;
+    margin: 1vw;
+    background-color: #00b2be;
+    border: 2px solid #00b2be;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.botao:hover{
+    transition: 0.2s;
+    background-color: #ffffff;
+    border: 2px solid #00b2be;
+    color: #00b2be;
+}
+.conteiner-modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000070;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    opacity: 0;
+}
+.modal{
+    width: 50vw;
+    margin: 5vh auto;
+    
+    border-radius: 5px;
+    box-shadow: 1px 0px 5px #0a0a0a;
+}
+.form{
+    display: grid;
+    grid-template-areas: 
+        "nome nome nome nome"
+        "email email celular celular"
+        "endereco numero bairro bairro"
+        "cidade cidade estado cep";
+    gap: 10px;
+    padding: 2vw;
+
+    background-color: #dfdfdf;
+    
+}
+
+#nome{ grid-area: nome;}
+#email{ grid-area: email;}
+#celular{ grid-area: celular;}
+#endereco{ grid-area: endereco;}
+#numero{ grid-area: numero;}
+#bairro{ grid-area: bairro;}
+#cidade{ grid-area: cidade;}
+#estado{ grid-area: estado;}
+#cep{ grid-area: cep;}
+
+.form > input{
+    width: 100%;
+    padding: 5px;
+    outline: none;
+}
+
+.exibir-modal{
+    opacity: 1;
+    z-index: 999;
+}
+
+.acao{
+    display: flex;
+    justify-content: center;
+    background-color: #dfdfdf;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.tabela{
+    width: 100%;
+    background-color: #dfdfdf;
+    border-top: solid 1px #d3d3d3;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+    padding-bottom: 50px;
+}
+th{
+    padding: 5px;
+    color: #002729;
+    font: bold calc(3px + 1vw) sans-serif;   
+}
+td{
+    border: 1px solid #d3d3d3;
+    color: #002729;
+    font: bold calc(2px + 1vw) sans-serif;
+    padding: 5px;
+}
+
+.registros tr {
+    background-color: #ffffff;
+}
+.registros tr:hover {
+
+    background-color: #d3d3d3;
+    color: #1e1e1e;
+}
